@@ -1,0 +1,29 @@
+{
+    "port": "5424",
+    "baseURL": "http://localhost:5424",
+    "license": "UulwVXgDjIbd4Otuas0vmWA9hTC75-4uwrriqL3JhkeVo",
+    "debug": {
+        "logger": false,
+        "other": true
+    },
+    "staff": [],
+
+    "info": {
+        "name": "My Server",
+        "icon": ""
+    },
+
+    "discord": {
+        "token": "MTE5NDczMTA3MTU4NjE4NTI5Ng.GyulwV.PJ2wtWPNateP8keiG9ot1IiHPY4hYjq3RtdA8I",
+        "clientID": "1194731071586185296",
+        "clientSecret": "Sb6a_Dww6Tz-Zt11vGssF5cebvtAlZtJ"
+    },
+
+    "mysql": {
+        "host": "127.0.0.1",
+        "port": 3306,
+        "username": "root",
+        "password": "",
+        "database": ""
+    }
+}

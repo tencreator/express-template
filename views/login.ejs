@@ -1,0 +1,24 @@
+<%- include('inc/_header.ejs') %>
+
+<div class="flex justify-center">
+    <div class="card bg-base-300 w-96 flex justify-center p-10">
+        <h2 class="font-extrabold text-xl text-center">Login</h2>
+        <form action="" method="post" class="w-full">
+            <div>
+                <label for="email">Email</label>
+                <input disabled name="email" id="email" type="email" class="input input-bordered w-full max-w-xs">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input disabled name="password" id="password" type="password" class="input input-bordered w-full max-w-xs">
+            </div>
+            <button type="submit" class="btn btn-disabled w-full btn-secondary mt-5">Submit</button>
+            <p class="text-center">Standalone logins are not supported at this point in time</p>
+        </form>
+
+        <a href="/login/discord" class="btn discord mt-10"><i class="fa-brands fa-discord"></i> Discord</a>
+    </div>
+</div>
+
+
+<%- include('inc/_footer.ejs') %>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - <%= page %></title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/ccf0172ee0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        // Check if the system prefers dark mode
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (isDarkMode) {
+            document.body.getAttribute('data-theme').value = 'dracula';
+        } else {
+            document.body.getAttribute('data-theme').value = 'cupcake';
+        }
+    </script>
+</head>
+<body class="flex flex-col" data-theme="">
+    <header>
+        <div class="navbar bg-base-300 z-50">
+            <div class="flex-1">
+              <a class="btn btn-ghost text-xl" href="/"><%= title %> - <%= page %></a>
+            </div>
+            <div class="flex-none">
+              <ul class="menu lg:menu-horizontal px-1">
+                <li>
+                    <details>
+                        <summary class="bg-base-500">
+                            <p>Forums</p>
+                        </summary>
+                        <ul class="p-2 bg-base-200 rounded-t-none z-50">
+                            <li><a>PLACE HOLDER</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <% if (isAuthenticated && user !== null){ %>
+                <li>
+                    <details>
+                        <summary class="bg-base-500">
+                            <p>Forums Manager</p>
+                        </summary>
+                        <ul class="p-2 bg-base-200 rounded-t-none z-50">
+                            <li><a>Create Forums</a></li>
+                            <li><a>View Forums</a></li>
+                            <li><a>View responses</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <% } if (user !== null && isAuthenticated){ %>
+                <li class="pr-16">
+                    <details>
+                        <summary class="bg-base-500">
+                            <!-- <img src="https://cdn.discordapp.com/avatars/518334475038359555/acd9f148b38e2b2fa75babb2e57759e4.webp?size=20" alt="My Profile"> -->
+                            <img src="<%- `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.webp?size=20` %>" alt="My Profile">
+                        </summary>
+                        <ul class="p-2 bg-base-200 rounded-t-none z-50">
+                            <li><a>My Account</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <% } else { %>
+                <li><a href="/login">Login</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </header>
+    <main>

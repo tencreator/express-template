@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+main {
+    --var-tb-margin: 20px;
+    --var-side-margin: 12px;
+    
+    margin-top: var(--var-tb-margin);
+    margin-bottom: var(--var-tb-margin);
+    margin-left: var(--var-side-margin);
+    margin-right: var(--var-side-margin);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.discord {
+    background-color: rgb(114,137,218);
+    color: white;
+}
