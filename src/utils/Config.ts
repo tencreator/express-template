@@ -3,8 +3,8 @@ import { json, productInfo } from './types'
 
 //// Product Config
 
-const pId: number = 9
-const pName: string = 'Forums Site'
+const pId: number = 0
+const pName: string = 'NEW PROJECT'
 const pVersion: string = '0.0.1'
 
 const product: productInfo = {
