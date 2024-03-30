@@ -14,9 +14,9 @@
     },
 
     "discord": {
-        "token": "MTE5NDczMTA3MTU4NjE4NTI5Ng.GyulwV.PJ2wtWPNateP8keiG9ot1IiHPY4hYjq3RtdA8I",
-        "clientID": "1194731071586185296",
-        "clientSecret": "Sb6a_Dww6Tz-Zt11vGssF5cebvtAlZtJ"
+        "token": "",
+        "clientID": "",
+        "clientSecret": ""
     },
 
     "mysql": {
